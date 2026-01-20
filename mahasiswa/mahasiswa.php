@@ -2,10 +2,10 @@
 <?php
 session_start();
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-    header('Location: ../login.php');
+    header('Location: ../auth/login.php');
     exit();
 }
-include_once("../koneksi.php");
+include_once("../db/koneksi.php");
 
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 $limit = isset($_GET['limit']) && is_numeric($_GET['limit']) ? (int)$_GET['limit'] : 10;
@@ -35,7 +35,7 @@ $total_pages = ceil($total_rows / $limit);
 </head>
 
 <body>
-    <a href="../logout.php"><< Logout</a><br />
+    <a href="../auth/logout.php"><< Logout</a><br />
     <h2>Data Mahasiswa</h2><br />
     <a href="mahasiswa_tambah.php">+ Tambah Data Baru</a><br />
     <form method="get" style="margin: 16px 0; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">

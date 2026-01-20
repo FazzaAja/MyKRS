@@ -1,8 +1,3 @@
-/* Responsive Table Wrapper */
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-}
 @media (max-width: 700px) {
   .table-responsive {
     border: 0;
@@ -104,4 +99,9 @@ textarea {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
 }

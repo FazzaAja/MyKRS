@@ -1,4 +1,4 @@
 <?php
-include_once("koneksi.php");
+include_once("db/koneksi.php");
 
-header("Location:login.php");
+header("Location:auth/login.php");

@@ -73,6 +73,8 @@ Fitur-fitur ini mendukung kemudahan penggunaan, keamanan, dan fleksibilitas peng
 - `mahasiswa/` : Modul data mahasiswa
 - `krs/` : Modul KRS
 - `vendor/` : Library eksternal (FPDF untuk export PDF)
+- `auth/` : Authentikasi
+- `db/` : Koneksi database dan API
 
 ## Lisensi
 

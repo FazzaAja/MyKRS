@@ -1,6 +1,19 @@
 <?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: ../auth/login.php');
+    exit();
+}
+
+if ($_SESSION['user']['role'] === 'mahasiswa') {
+    if (isset($_GET['id']) && $_SESSION['user']['id_mhs'] != $_GET['id']) {
+        header('Location: ../auth/login.php');
+        exit();
+    }
+}
+
 require_once '../vendor/autoload.php';
-require_once '../koneksi.php';
+require_once '../db/koneksi.php';
 $id = $_GET['id'];
 
 // Query data mahasiswa
@@ -93,5 +106,5 @@ $pdf->Cell(20, 10, $total_sks, 1, 0, 'C');
 $pdf->Output('I', 'KRS_' . $mhs['nim'] . '.pdf');
 
 require_once '../vendor/autoload.php';
-require_once '../koneksi.php';
+require_once '../db/koneksi.php';
 require_once '../vendor/setasign/fpdf/fpdf.php';

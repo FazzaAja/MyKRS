@@ -1,19 +1,18 @@
-
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header('Location: ../login.php');
+    header('Location: ../auth/login.php');
     exit();
 }
 
 if ($_SESSION['user']['role'] === 'mahasiswa') {
     if (isset($_GET['id']) && $_SESSION['user']['id_mhs'] != $_GET['id']) {
-        header('Location: ../login.php');
+        header('Location: ../auth/login.php');
         exit();
     }
 }
 
-include_once("../koneksi.php");
+include_once("../db/koneksi.php");
 
 $id = $_GET['id'];
 
@@ -84,7 +83,7 @@ while ($row = mysqli_fetch_assoc($krs_result)) {
 
 <body>
     <?php if ($_SESSION['user']['role'] === 'mahasiswa'): ?>
-        <a href="../logout.php" onclick="return confirm('Yakin ingin logout?');"><< Logout</a>
+        <a href="../auth/logout.php" onclick="return confirm('Yakin ingin logout?');"><< Logout</a>
     <?php else: ?>
         <a href="../mahasiswa/mahasiswa.php"><< Kembali</a>
     <?php endif; ?>
