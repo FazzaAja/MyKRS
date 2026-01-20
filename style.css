@@ -1,0 +1,107 @@
+/* Responsive Table Wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+@media (max-width: 700px) {
+  .table-responsive {
+    border: 0;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    display: none;
+  }
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    background: #fff;
+  }
+  td {
+    position: relative;
+    padding-left: 50%;
+    min-height: 40px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  td:before {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+  }
+}
+/* Reset agar padding tidak menambah lebar elemen */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  padding: 20px;
+  margin: 0; /* Reset margin body */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+a {
+  text-decoration: none;
+}
+.btn-delete {
+  color: red;
+}
+.btn-add {
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.info-mhs {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
