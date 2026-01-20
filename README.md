@@ -46,6 +46,21 @@ Aplikasi ini merupakan sistem informasi akademik berbasis web yang digunakan unt
 - Webservice API untuk data mata kuliah
 - Pengembangan fitur lain sesuai kebutuhan
 
+## Fitur Lainnya
+
+- **Pencarian Data**: Tersedia fitur pencarian data mahasiswa berdasarkan NIM, nama, atau alamat.
+- **Pagination**: Tampilan data mahasiswa menggunakan pagination dan limit per halaman agar lebih mudah dibaca.
+- **Keamanan Session**: Setiap halaman penting dilindungi dengan session dan role user, sehingga hanya user yang berhak dapat mengakses fitur tertentu.
+- **Responsive Design**: Tampilan aplikasi sudah mendukung perangkat mobile dan desktop dengan CSS responsif.
+- **Konfirmasi & Validasi**: Terdapat konfirmasi sebelum menghapus data dan validasi pada setiap form input.
+- **Logout**: Fitur logout untuk mengakhiri sesi pengguna.
+- **Integrasi API**: Data mata kuliah pada KRS diambil dari API (`api_matakuliah.php`).
+- **Cetak PDF**: KRS dapat dicetak langsung ke PDF dengan library FPDF.
+- **Notifikasi**: Terdapat notifikasi (alert) pada aksi sukses/gagal seperti tambah, ubah, atau hapus data.
+- **Auto Redirect**: Setelah login, user akan diarahkan ke halaman sesuai role.
+
+Fitur-fitur ini mendukung kemudahan penggunaan, keamanan, dan fleksibilitas pengembangan aplikasi lebih lanjut.
+
 ## Cara Menjalankan
 
 1. Clone repository ini
