@@ -5,7 +5,7 @@ RewriteEngine On
 # BAGIAN 0: Pengecualian URL API
 # KECUALIKAN API AGAR TIDAK DI-REDIRECT
 # -----------------------------------------------------------
-RewriteCond %{REQUEST_URI} ^/pwd/api_matakuliah\.php [NC]
+RewriteCond %{REQUEST_URI} ^/pwd/db/api_matakuliah\.php [NC]
 RewriteRule ^ - [L]
 
 # -----------------------------------------------------------

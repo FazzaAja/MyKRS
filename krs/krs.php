@@ -47,7 +47,7 @@ $result = mysqli_query($con, "SELECT * FROM krs, mahasiswa, mata_kuliah mk WHERE
 $mahasiswa = mysqli_query($con, "SELECT * FROM mahasiswa WHERE id = $id");
 
 // Ambil data mata_kuliah dari API
-$api_url = 'http://127.0.0.1/pwd/db/api_matakuliah.php/';
+$api_url = 'http://127.0.0.1/pwd/db/api_matakuliah.php';
 $matkul_data = [];
 if (function_exists('curl_init')) {
     $ch = curl_init();
